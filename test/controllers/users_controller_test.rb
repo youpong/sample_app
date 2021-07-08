@@ -14,6 +14,11 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     assert_select "title", "Sign up | #{@base_title}"        
   end
 
+  test "should redirect index when no logged in" do
+    get users_path
+    assert_redirected_to login_url
+  end
+  
   test "should redirect edit when not logged in" do
     get edit_user_path(@user)
     assert flash.any?
