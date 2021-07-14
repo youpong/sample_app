@@ -5,11 +5,12 @@ class MicropostsInterfaceTest < ActionDispatch::IntegrationTest
   def setup
     @user = users(:michael)
   end
-  
+
   test "micropost interface" do
     log_in_as(@user)
     get root_path
     assert_select 'div.pagination'
+    assert_select 'input[type=file]'
     # invalid micropost
     assert_no_difference 'Micropost.count' do
       post microposts_path, params: { micropost: { content: "" } }
@@ -18,9 +19,12 @@ class MicropostsInterfaceTest < ActionDispatch::IntegrationTest
     assert_select 'a[href=?]', '/?page=2'
     # valid micropost
     content = "This micropost really ties the room together"
+    image = fixture_file_upload('test/fixtures/kitten.jpg', 'image/jpeg')
     assert_difference 'Micropost.count', 1 do
-      post microposts_path, params: { micropost: { content: content } }
+      post microposts_path, params: { micropost:
+                                      { content: content, image: image } }
     end
+    assert assigns(:micropost).image.attached?
     assert_redirected_to root_url
     follow_redirect!
     assert_match content, response.body
