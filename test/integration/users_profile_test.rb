@@ -4,7 +4,7 @@ class UsersProfileTest < ActionDispatch::IntegrationTest
   include ApplicationHelper
 
   def setup
-    @user = users(:michael)
+    @user  = users(:michael)
   end
   
   test "profile display" do
@@ -13,6 +13,8 @@ class UsersProfileTest < ActionDispatch::IntegrationTest
     assert_select 'title', full_title(@user.name)
     assert_select 'h1',    text: @user.name
     assert_select 'h1>img.gravatar'
+    assert_select '#following', "#{@user.following.count}"
+    assert_select '#followers', "#{@user.followers.count}"    
     assert_match  "(#{@user.microposts.count})", response.body
     assert_select 'div.pagination', count: 1
     @user.microposts.paginate(page: 1).each do |micropost|
