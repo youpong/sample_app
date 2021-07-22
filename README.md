@@ -17,7 +17,8 @@
 その後、次のコマンドで必要になる RubyGems をインストールします。
 
 ```
-$ bundle install --without production
+$ bundle config set --local without 'production'
+$ bundle install
 ```
 
 その後、データベースへのマイグレーションを実行します。
