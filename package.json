@@ -9,6 +9,7 @@
     "bootstrap": "3.4.1",
     "glob-parent": "^5.1.2",
     "jquery": "^3.5.0",
+    "trim-newlines": "^3.0.1",
     "turbolinks": "^5.2.0"
   },
   "version": "0.1.0",
