@@ -6,7 +6,7 @@
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "4.3.0",
-    "bootstrap": "3.4.1",
+    "bootstrap": "^3.4.1",
     "glob-parent": "^5.1.2",
     "jquery": "^3.5.0",
     "trim-newlines": "^3.0.1",
