@@ -10,7 +10,8 @@
     "glob-parent": "^5.1.2",
     "jquery": "^3.5.0",
     "trim-newlines": "^3.0.1",
-    "turbolinks": "^5.2.0"
+    "turbolinks": "^5.2.0",
+    "webpack": "^4.0.0"
   },
   "version": "0.1.0",
   "devDependencies": {
