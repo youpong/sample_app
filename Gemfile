@@ -8,6 +8,11 @@ gem 'aws-sdk-s3',                 '1.48.0', require: false
 gem 'image_processing',           '1.9.3'
 gem 'active_storage_validations', '0.8.2'
 gem 'bcrypt',                     '3.1.13'
+# cannot use gems together 'faker' and 'faker-okinawa'
+# They define same Module 'Fake'.
+# gem 'faker' define Fake::File.
+# Resulting in gem 'faker-okinawa' use class File as Fake::File in Module 'Fake'.
+# Then, fail to call File.expand() because Fake::File doesn't define it.
 gem 'faker',                      '2.1.2'
 #gem 'faker-okinawa',             '0.1.1'
 gem 'will_paginate',              '3.1.8'
