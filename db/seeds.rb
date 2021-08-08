@@ -1,3 +1,5 @@
+Faker::Config.locale = :ja
+
 # generate users
 User.create!(name:                  "Example User",
              email:                 "example@railstutorial.org",
