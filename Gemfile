@@ -13,8 +13,8 @@ gem 'bcrypt',                     '3.1.13'
 # gem 'faker' define Fake::File.
 # Resulting in gem 'faker-okinawa' use class File as Fake::File in Module 'Fake'.
 # Then, fail to call File.expand() because Fake::File doesn't define it.
-gem 'faker',                      '2.18.0'
 #gem 'faker-okinawa',             '0.1.1'
+gem 'faker', github: "faker-ruby/faker", ref: "5169f7b"
 gem 'will_paginate',              '3.1.8'
 gem 'bootstrap-will_paginate',    '1.0.0'
 gem 'bootstrap-sass',             '3.4.1'
