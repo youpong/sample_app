@@ -8,8 +8,8 @@ gem 'aws-sdk-s3',                 '1.48.0', require: false
 gem 'image_processing',           '1.9.3'
 gem 'active_storage_validations', '0.8.2'
 gem 'bcrypt',                     '3.1.13'
-gem 'faker',    github: "faker-ruby/faker", ref:    "5169f7b"
 gem 'faker-okinawa',              '0.1.1'
+gem 'faker',    github: "faker-ruby/faker", ref:    "5169f7b"
 gem 'will_paginate',              '3.1.8'
 gem 'bootstrap-will_paginate',    '1.0.0'
 gem 'bootstrap-sass',             '3.4.1'
