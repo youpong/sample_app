@@ -6,6 +6,13 @@ GIT
     faker (2.18.0)
       i18n (>= 1.6, < 2)
 
+GIT
+  remote: https://github.com/youpong/faker-okinawa.git
+  revision: ee6a96ba84a20ca31a026524d8cb0f41fc6fcf79
+  branch: with-faker
+  specs:
+    faker-okinawa (0.1.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -117,7 +124,6 @@ GEM
     crass (1.0.6)
     erubi (1.10.0)
     execjs (2.8.1)
-    faker-okinawa (0.1.1)
     ffi (1.15.3)
     formatador (0.3.0)
     globalid (0.4.2)
@@ -289,7 +295,7 @@ DEPENDENCIES
   byebug (= 11.0.1)
   capybara (= 3.28.0)
   faker!
-  faker-okinawa (= 0.1.1)
+  faker-okinawa!
   guard (= 2.16.2)
   guard-minitest (= 2.4.6)
   image_processing (= 1.9.3)
