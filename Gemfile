@@ -13,7 +13,7 @@ gem 'faker',         github: "faker-ruby/faker",      ref:    "5169f7b"    # use
 gem 'will_paginate',              '3.1.8'
 gem 'bootstrap-will_paginate',    '1.0.0'
 gem 'bootstrap-sass',             '3.4.1'
-gem 'puma',                       '4.3.8'
+gem 'puma',                       '>=4.3.9'
 gem 'sassc-rails',                '2.1.2'
 gem 'webpacker',                  '4.0.7'
 gem 'turbolinks',                 '5.2.0'
