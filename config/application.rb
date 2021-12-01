@@ -19,6 +19,8 @@ module SampleApp
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
 
+    # Works on Web client disabled JavaScript.
+    # https://railstutorial.jp/chapters/following_users?version=6.0#sec-a_working_follow_button_with_ajax
     config.action_view.embed_authenticity_token_in_remote_forms = true
   end
 end
