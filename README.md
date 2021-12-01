@@ -20,14 +20,14 @@
 の(vendor/bundle)にライブラリをインストールします。
 
 ```
-$ bundle config set --local path 'vendor/bundle'
+$ bin/bundle config set --local path 'vendor/bundle'
 ```
 
 RubyGems のインストール
 
 ```
-$ bundle config set --local without 'production'
-$ bundle install
+$ bin/bundle config set --local without 'production'
+$ bin/bundle install
 ```
 
 その後、データベースへのマイグレーションを実行します。
@@ -54,3 +54,26 @@ $ bin/rails server
 ## 参考
 
 https://github.com/yasslab/sample_apps
+
+# How to Update Webpacker
+
+changing your `Gemfile`:
+
+```ruby
+gem 'webpacker', '~> 6.0'
+```
+
+Then running the following to install Webpacker:
+
+```bash
+$ bin/bundle install
+$ bin/rails webpacker:install
+```
+
+When `package.json` and/or `yarn.lock` changes, such as when pulling down changes to your
+local environment in a team settings, be sure to keep your NPM packages up-to-date:
+
+```bash
+$ yarn install
+```
+
